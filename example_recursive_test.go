@@ -24,7 +24,7 @@ import (
 	"net/rpc"
 	"strings"
 
-	"github.com/soheilhy/cmux"
+	"github.com/gcm256/cmux"
 )
 
 type recursiveHTTPHandler struct{}

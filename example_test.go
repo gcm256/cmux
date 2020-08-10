@@ -28,7 +28,7 @@ import (
 	"golang.org/x/net/context"
 	"golang.org/x/net/websocket"
 
-	"github.com/soheilhy/cmux"
+	"github.com/gcm256/cmux"
 	grpchello "google.golang.org/grpc/examples/helloworld/helloworld"
 )
 
