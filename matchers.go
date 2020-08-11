@@ -54,6 +54,17 @@ var defaultHTTPMethods = []string{
 	"CONNECT",
 }
 
+// NetString matches NetString requests
+func NetString() Matcher {
+	return func(r io.Reader) bool {
+		_, err := ParseNetString(bufio.NewReader(r))
+		if err != nil {
+			return false
+		}
+		return true
+	}
+}
+
 // HTTP1Fast only matches the methods in the HTTP request.
 //
 // This matcher is very optimistic: if it returns true, it does not mean that
